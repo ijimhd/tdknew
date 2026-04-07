@@ -93,27 +93,71 @@ li:hover a {
     display: none;
 }
 
-@media screen and (max-width: 1200px){
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./img/welcome-normal.webp");
+    background-repeat: no-repeat;
+    background-size: 100vw 100%;
+}
+
+.hero-container{
+    height: 800px;
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-inline: 2em;
+    padding-block: 3em;
+    justify-content: center;
+}
+
+.hero-content{
+    align-self: flex-end;
+    text-align: center;
+}
+
+.hero-title{
+    font-size: 2.6em;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px var(--primary-background-color);
+    background-color: var(--primary-accent-color);
+    border-radius: 7px;
+    padding-block: 0.5em;
+}
+
+.hero-paragraph{
+    text-shadow: 2px 2px 8px black;
+    padding-block: 1.3em;
+}
+
+@media screen and (max-width: 1400px){
     body{
         font-size: 18px;
+    }
+
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./img/welcome-medium.webp");
     }
 }
 
 @media screen and (max-width: 1000px){
 
     .desktop.logo,
-    .reserve-button{
+    .reserve-button.desktop{
         display: none;
     }
 
     .mobile.logo{
         display: inline-block;
+        font-size: 1.8em;
     }
 
     .mobile-logo-container{
         display: flex;
         justify-content: center;
-        padding-top: 3vh;
+        padding-block: 3vh;
+    }
+
+    .hero-title{
+        background-color: transparent;
     }
 
     .mobile-navbar{
@@ -132,6 +176,7 @@ li:hover a {
         left: 50%;
         transform: translateX(-50%);
         width: 100vw;
+        height:11vh;
         background-color: #1a1a1a;
         padding: 20px 10px;
         z-index: 1000;
@@ -164,7 +209,15 @@ li:hover a {
     .nav-item.active .label{
         color: var(--primary-accent-color);
     }
-    
+
+    .hero{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./img/welcome-small.webp");
+        background-size: cover;
+    }
+
+    .hero-container{
+        height: 600px;
+    }
 }
 
 @media screen and (max-width: 440px){

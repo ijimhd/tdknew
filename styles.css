@@ -1,0 +1,155 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --primary-accent-color: #ff8c00;
+    --primary-background-color: #0a0806;
+    --primary-font-color: #f2e9de;
+}
+
+body{
+    background-color: var(--primary-background-color);
+    color: var(--primary-font-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color:var(--primary-font-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+a:hover{
+    color: var(--primary-accent-color);
+    transform: scale(1.1);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-block: 2em;
+    max-width: 1200px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    align-items: center;
+}
+
+li {
+    cursor: pointer;
+    transition: padding 0.3s ease;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+li:hover a {
+    transform: scale(1.1) translateY(-3px);
+    color: var(--primary-accent-color);
+}
+
+.logo{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.reserve-button{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #0a0806;
+    background-color: var(--primary-accent-color);
+    padding: 0.7em 1em;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.reserve-button:hover{
+    color: var(--primary-font-color);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px){
+
+    .logo,
+    .reserve-button{
+        display: none;
+    }
+
+    ul{
+        width:100%;
+    }
+
+    /* Container for the floating bar */
+    .navbar {
+    position: fixed;
+    bottom: 0px; /* Distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100vw;
+    background-color: #1a1a1a; /* Dark theme example */
+    padding: 30px 20px 40px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    }
+
+    /* Flexbox layout for items */
+    .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    }
+
+    .nav-item-link{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #ff8c00;
+        padding-inline: 15px;
+        padding-block: 10px;
+        border-radius: 30px;
+    }
+
+    .nav-item img{
+        width: 40px;
+    }
+    
+    .nav-item .label {
+        /* 1. Hide the text visually */
+        opacity: 0;
+        
+        /* 2. Collapse the space */
+        max-width: 0;
+        display: inline-block; /* Essential for width to work */
+        overflow: hidden;
+        white-space: nowrap; /* Prevents text from wrapping during animation */
+    }
+
+    .nav-item.active .label{
+        opacity: 1;
+        max-width: 100px;
+        font-size: 15px;
+    }
+
+    
+}
+
+

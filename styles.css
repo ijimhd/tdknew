@@ -89,6 +89,7 @@ li a{
 
 .mobile-navbar{
     display: none;
+    pointer-events: none;
 }
 
 .dropdown {

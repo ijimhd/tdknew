@@ -52,19 +52,21 @@ ul{
     align-items: center;
 }
 
-li {
+li{
     cursor: pointer;
     transition: padding 0.3s ease;
 }
 
-li a {
+li a ,
+.dropdown .dropbtn{
     display: block;
     text-decoration: none;
     text-align: center;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-li:hover a {
+li:hover a ,
+.dropdown .dropbtn:hover{
     transform: scale(1.1) translateY(-3px);
     color: var(--primary-accent-color);
 }
@@ -91,6 +93,10 @@ li:hover a {
 
 .mobile-navbar{
     display: none;
+}
+
+.dropdown .dropbtn:hover{
+    color:#ff8c00;
 }
 
 .hero{
@@ -224,4 +230,48 @@ li:hover a {
     ul{
         padding:0;
     }
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: var(--primary-font-color);
+  background-color: inherit;
+  margin: 0;
+  padding-inline: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-background-color);
+  min-width: 160px;
+  max-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--primary-font-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #1a1a1a;
+    color:#ff8c00;
+}
+
+.show {
+  display: block;
 }

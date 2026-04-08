@@ -7,6 +7,7 @@
         <title>TdkTax | Φοροτεχνικός</title>
         <link rel="stylesheet" href="styles.css">
         <script defer src="active-page.js"></script>
+        <script defer src="/js/dropdown.js"></script>
     </head>
     <body>
         <div class="mobile-logo-container">
@@ -27,16 +28,25 @@
                         <span class="label">Εφαρμογές</span>
                     </a>
                 </li>
+            <!--    <li class="nav-item">
+                    <a class="nav-item-link" href="./index.html">
+                        <img class="home-inactive mobile-navbar" src="./img/svg/online-inactive.svg" alt="Home page inactivenavbar icon">
+                        <span class="label">Online Υπηρεσίες</span>
+                    </a>
+                </li>-->
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn nav-item-link" onclick="myFunction()">Online Υπηρεσίες ▾</button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="https://forms.gle/Q86b1XGCceSC1BbW6" target="_blank" rel="noopener noreferrer">Αίτημα για πρόσληψη εργαζομένου</a>
+                            <a href="https://forms.gle/PCHnVJ614Bp6wKsj7" target="_blank" rel="noopener noreferrer">Εξ αποστάσεως εξυπηρέτηση πελατών</a>
+                        </div>
+                    </div> 
+                </li>
                 <li class="nav-item">
                     <a class="nav-item-link" href="./index.html">
                         <img class="home-inactive mobile-navbar" src="./img/svg/call-inactive.svg" alt="Home page inactivenavbar icon">
                         <span class="label">Επικοινωνία</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item-link" href="./index.html">
-                        <img class="home-inactive mobile-navbar" src="./img/svg/online-inactive.svg" alt="Home page inactivenavbar icon">
-                        <span class="label">Online Υπηρεσίες</span>
                     </a>
                 </li>
                 <li class="nav-item">

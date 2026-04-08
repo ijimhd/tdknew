@@ -25,7 +25,7 @@ body{
 }
 
 a ,
-.dropdown .dropbtn{
+.dropbtn{
     text-decoration: none;
     color: var(--primary-font-color);
     cursor: pointer;
@@ -33,7 +33,7 @@ a ,
 }
 
 a:hover ,
-.dropdown .dropbtn:hover{
+.dropbtn:hover{
     color: var(--primary-accent-color);
     transform: scale(1.1) translateY(-3px);
     transform: scale(1.1);
@@ -96,7 +96,7 @@ li a{
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropbtn {
   cursor: pointer;
   font-size: 20px;  
   border: none;
@@ -136,7 +136,7 @@ li a{
   display: block;
 }
 
-.dropdown .dropbtn:hover{
+.dropbtn:hover{
     color:#ff8c00;
 }
 
@@ -194,7 +194,7 @@ li a{
     }
 
     .nav-item .label,
-    .dropdown .dropbtn {
+    .dropbtn {
         font-size: 11px;
         text-align: center;
     }
@@ -204,8 +204,7 @@ li a{
         align-items: center;
     }
 
-    .nav-item-link,
-    .dropdown{
+    .nav-item-link{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -214,6 +213,13 @@ li a{
 
     .nav-item.active .label{
         color: var(--primary-accent-color);
+    }
+
+    .dropdown-content {
+        top: auto;          /* Reset the top position */
+        bottom: 100%;       /* Anchor it to the top of the button */
+        margin-top: 0;      /* Remove the desktop downward margin */
+        margin-bottom: 20px;
     }
 }
 
